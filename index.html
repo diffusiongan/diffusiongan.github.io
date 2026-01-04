@@ -305,18 +305,7 @@
                 BY EMOTIONS. 
             </p>
             </p>    
-                In this work, we propose a DiffGAN model combining diffusion
-                models and Generative Adversarial Networks, aiming to
-                mitigate the slow sampling drawback of diffusion models ap-
-                plied to symbolic music generation. We represented sym-
-                bolic music as image-like pianorolls instead of discrete MIDI
-                tokens and then used those to train the proposed diffusion
-                model. Our results demonstrate the successful control of our
-                diffusion model to generate symbolic music with a desired
-                emotion. Our model requires merely four time steps to de-
-                noise while the steps required by current state-of-the-art dif-
-                fusion models for symbolic music generation are in the order
-                of thousands. The generated symbolic music samples conditioned on 
+                In this work, we propose a diffusion model integrated with a Generative Adversarial Network, aiming to mitigate the slow sampling drawback of diffusion models applied to symbolic music generation. We enable the use of diffusion model by representing symbolic music as image-like pianorolls with velocity values instead of discrete event tokens and then used a Variational Autoencoder to obtain their latent representations to train the proposed diffusion model. Our results demonstrate the successful control of our diffusion model to generate symbolic music with a desired emotion. Our model uses merely 15 denoising diffusion steps to produce high-quality music, while most diffusion models for symbolic music generation require hundreds or thousands of steps. The generated symbolic music samples conditioned on 
                 different emotions are presented below.
                 
                 <!-- We compared our DiffGAN-T4 with a GAN that shares the
@@ -442,7 +431,7 @@
 
 </section>
 
-<!--         <section id="section1">
+        <section id="section1">
           <h2>Polyffusion</h2>
           <midi-player
             src="./static/midi/028_sdf_chd8bar[scale=5.0]_24-11-08_090745_segment_14.mid"
@@ -487,7 +476,7 @@
             </section>
           
           <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
-           -->
+          
         
 
         <!-- <section>
